@@ -6,6 +6,15 @@ provider:
   region: eu-central-1
   stage: dev
 
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:PutItem
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:DeleteItem
+      Resource: arn:aws:dynamodb:eu-central-1:209717058285:table/monkey_sanctuary
+
 functions:
   express:
     handler: handler.app
