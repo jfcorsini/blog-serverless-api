@@ -1,16 +1,10 @@
 'use strict';
 
-module.exports.hello = (event, context, callback) => {
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-    }),
-  };
+const awsServerlessExpress = require('aws-serverless-express');
+const app = require('./src/index');
 
-  callback(null, response);
+const server = awsServerlessExpress.createServer(app);
 
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
+module.exports = {
+  app: (event, context) => awsServerlessExpress.proxy(server, event, context),
 };
