@@ -1,0 +1,24 @@
+{
+  "name": "serverless-api-monkey-sanctuary",
+  "version": "1.0.0",
+  "description": "API used to learn & teach about Serverless development with AWS",
+  "main": "handler.js",
+  "author": "João Fernando Corsini",
+  "license": "ISC",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.275.1",
+    "aws-serverless-express": "^3.2.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0"
+  }
+}
