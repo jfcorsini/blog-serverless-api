@@ -27,8 +27,6 @@ router.post('/', (req, res) => {
       id: parseInt(body.id, 10),
       specie: body.specie,
       arrival_date: now.toISOString(),
-      name: body.name,
-      color: body.color,
     },
   };
 
