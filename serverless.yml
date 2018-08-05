@@ -12,9 +12,10 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:Scan
+        - dynamodb:Query
         - dynamodb:GetItem
         - dynamodb:DeleteItem
-      Resource: arn:aws:dynamodb:eu-central-1:209717058285:table/monkey_sanctuary
+      Resource: arn:aws:dynamodb:eu-central-1:209717058285:table/monkey_sanctuary*
 
 functions:
   express:
